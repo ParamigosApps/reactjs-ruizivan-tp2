@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <h1>React Js - 1ra Entrega</h1>
+      <h1>React Js - Ruiz Iván</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           Conteo de clicks: {count}
