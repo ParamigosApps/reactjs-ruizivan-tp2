@@ -1,20 +1,13 @@
-import { useState } from "react";
-import "./App.css";
+import NavBar from './components/NavBar.jsx'
+import Body from './components/Body.jsx'
+import Footer from './components/Footer.jsx'
 
-function App() {
-  const [count, setCount] = useState(0);
-
+export default function App() {
   return (
-    <>
-      <h1>React Js - Ruiz Iván</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          Conteo de clicks: {count}
-        </button>
-        <p>Primera entrega, para el profe con mucho cariño</p>
-      </div>
-    </>
-  );
+    <div id="app-container">
+      <NavBar />
+      <Body />
+      <Footer />
+    </div>
+  )
 }
-
-export default App;
