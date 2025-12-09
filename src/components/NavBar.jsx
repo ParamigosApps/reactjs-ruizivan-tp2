@@ -1,4 +1,4 @@
-// src/components/NavBar.jsx
+import { Link } from 'react-router-dom'
 import Carrito from './Carrito.jsx'
 import './NavBar.css'
 
@@ -6,22 +6,37 @@ export default function NavBar() {
   return (
     <nav className="navbar">
       <div id="Titulo" className="navbar-title">
-        Tienda TP1
+        E-Commerce TP 2
       </div>
 
       <div>
         <ul className="navbar-links">
           <li>
-            <a href="#">Inicio</a>
+            <Link to="/">Inicio</Link>
           </li>
-          <li>
-            <a href="#">Productos</a>
+
+          <li className="dropdown">
+            <span className="dropdown-title">Productos ▾</span>
+
+            <ul className="dropdown-menu">
+              <li>
+                <Link to="/productos">Todos</Link>
+              </li>
+              <li>
+                <Link to="/category/categoria1">Categoría 1</Link>
+              </li>
+              <li>
+                <Link to="/category/categoria2">Categoría 2</Link>
+              </li>
+            </ul>
           </li>
+
           <li>
-            <a href="#">Contacto</a>
+            <Link to="/contacto">Contacto</Link>
           </li>
         </ul>
       </div>
+
       <div>
         <Carrito />
       </div>
